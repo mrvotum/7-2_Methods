@@ -8,13 +8,13 @@ export default class Character {
   }
 
   levelUp() {
-    if (this.health > 0) {
+    if (this.health <= 0) {
+      throw TypeError('Нельзя повысить уровень умершего');
+    } else {
       this.level += 1;
       this.defence += this.defence * 0.2; // Повышение на 20%
       this.attack += this.attack * 0.2;
       this.health = 100;
-    } else {
-      throw TypeError('Нельзя повысить уровень умершего');
     }
   }
 }

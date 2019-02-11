@@ -1,4 +1,4 @@
-import Character from './character.js';
+import Character from './character';
 
 const player = new Character('Rick', 10);
 console.log(player);
